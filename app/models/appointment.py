@@ -21,7 +21,7 @@ class Appointment(models.Model):
     updated_at = models.DateTimeField(auto_now=True)  # Automatically updates when modified
 
     def __str__(self):
-        return f"Appointment with {self.client} on {self.appointment_date}"
+        return str(self.client)
 
     class Meta:
         ordering = ['appointment_date']
