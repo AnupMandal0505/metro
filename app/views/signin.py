@@ -33,6 +33,7 @@ class LoginAPI(APIView):
                     'user': UserSerializer(user, many=False).data,
                     'refresh': str(refresh),
                     'access': str(refresh.access_token),
+                    
                 }
                 return Response(success_response)
 
