@@ -31,8 +31,8 @@ class LoginAPI(APIView):
                 print("After Refress")
                 success_response = {
                     'user': UserSerializer(user, many=False).data,
-                    'refresh_token': str(refresh),
-                    'token': str(refresh.access_token),
+                    'refresh': str(refresh),
+                    'access': str(refresh.access_token),
                 }
                 return Response(success_response)
 
